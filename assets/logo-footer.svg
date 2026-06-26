@@ -1,0 +1,73 @@
+<svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="monitorGradF" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#3b82f6"/>
+            <stop offset="50%" style="stop-color:#60a5fa"/>
+            <stop offset="100%" style="stop-color:#2563eb"/>
+        </linearGradient>
+        <linearGradient id="screenGradF" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#1e3a5f"/>
+            <stop offset="100%" style="stop-color:#1e293b"/>
+        </linearGradient>
+        <linearGradient id="circuitGradF" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#60a5fa"/>
+            <stop offset="100%" style="stop-color:#93c5fd"/>
+        </linearGradient>
+        <linearGradient id="textGradHF" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#ffffff"/>
+            <stop offset="100%" style="stop-color:#f1f5f9"/>
+        </linearGradient>
+        <linearGradient id="textGradSF" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#60a5fa"/>
+            <stop offset="100%" style="stop-color:#93c5fd"/>
+        </linearGradient>
+        <filter id="glowF">
+            <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Circuit Lines (Left) -->
+    <path d="M2 25 L8 25 L12 20 L18 20" stroke="url(#circuitGradF)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M2 30 L6 30 L10 35 L18 35" stroke="url(#circuitGradF)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.3"/>
+    <circle cx="18" cy="20" r="2" fill="#60a5fa" opacity="0.6"/>
+    <circle cx="18" cy="35" r="2" fill="#60a5fa" opacity="0.4"/>
+
+    <!-- Circuit Lines (Right) -->
+    <path d="M72 20 L78 20 L82 25 L88 25" stroke="url(#circuitGradF)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M72 35 L78 35 L82 30 L88 30" stroke="url(#circuitGradF)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.3"/>
+    <circle cx="72" cy="20" r="2" fill="#60a5fa" opacity="0.6"/>
+    <circle cx="72" cy="35" r="2" fill="#60a5fa" opacity="0.4"/>
+
+    <!-- Monitor Body -->
+    <rect x="18" y="8" width="54" height="38" rx="4" ry="4" fill="url(#monitorGradF)" filter="url(#glowF)"/>
+    
+    <!-- Screen -->
+    <rect x="22" y="12" width="46" height="28" rx="2" ry="2" fill="url(#screenGradF)"/>
+    
+    <!-- Screen Content - Code Lines -->
+    <rect x="26" y="17" width="20" height="2" rx="1" fill="#60a5fa" opacity="0.7"/>
+    <rect x="26" y="22" width="30" height="2" rx="1" fill="#93c5fd" opacity="0.5"/>
+    <rect x="26" y="27" width="15" height="2" rx="1" fill="#3b82f6" opacity="0.6"/>
+    <rect x="26" y="32" width="25" height="2" rx="1" fill="#60a5fa" opacity="0.4"/>
+    
+    <!-- Cursor Blink -->
+    <rect x="44" y="16" width="2" height="4" rx="1" fill="#60a5fa" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Monitor Stand -->
+    <path d="M38 46 L48 46 L50 52 L36 52 Z" fill="url(#monitorGradF)"/>
+    
+    <!-- Monitor Base -->
+    <rect x="32" y="52" width="24" height="3" rx="1.5" fill="url(#monitorGradF)"/>
+
+    <!-- Company Name - ElevateIT (White) -->
+    <text x="95" y="28" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="20" fill="url(#textGradHF)" letter-spacing="-0.5">ElevateIT</text>
+    
+    <!-- Company Name - Solutions (Light Blue) -->
+    <text x="95" y="48" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="16" fill="url(#textGradSF)" letter-spacing="1">Solutions</text>
+</svg>
